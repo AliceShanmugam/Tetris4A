@@ -2,6 +2,7 @@ import Interfaces.AccueilResult;
 import Interfaces.EcranAccueil;
 import Interfaces.EcranFinMulti;
 import Interfaces.EcranFinSolo;
+import MoteurDeJeu.JeuController;
 import MoteurDeJeu.JeuMulti;
 import MoteurDeJeu.JeuSolo;
 import MoteurDeJeu.Pieces.Piece;
@@ -14,19 +15,27 @@ public class MainClass {
 
     public static void main (String[] args){
 
-        // Lancement de l'ecran d'accueil
-        EcranAccueil accueil = new EcranAccueil();
+        System.out.print("AADEWDAD");
+        JeuController controller = new JeuController();
+        javax.swing.SwingUtilities.invokeLater(()-> controller.createAndShowGUI());
 
-        // On récupère le choix de l'utilisateur
-        AccueilResult accueilResult = accueil.start();
+        System.out.print("AADEWDAD");
+       /* if(mainMenu.playGameSelected())
+        {
+            // Lancement de l'ecran d'accueil
+            EcranAccueil accueil = new EcranAccueil();
 
-        // Lancement du mode solo ou multi
-        if (accueilResult.solo) {
-            startSolo();
-        }
-        else {
-            startMulti(accueilResult.ip);
-        }
+            // On récupère le choix de l'utilisateur
+            AccueilResult accueilResult = accueil.start();
+
+            // Lancement du mode solo ou multi
+            if (accueilResult.solo) {
+                startSolo();
+            }
+            else {
+                startMulti(accueilResult.ip);
+            }
+        }*/
 
     }
 
