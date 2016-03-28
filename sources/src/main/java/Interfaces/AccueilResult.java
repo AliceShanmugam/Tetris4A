@@ -1,5 +1,7 @@
 package Interfaces;
 
+import java.net.InetAddress;
+
 public class AccueilResult {
 
     public boolean solo;

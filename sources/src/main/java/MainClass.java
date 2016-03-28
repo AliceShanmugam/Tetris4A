@@ -1,5 +1,3 @@
-import Interfaces.AccueilResult;
-import Interfaces.EcranAccueil;
 import Interfaces.EcranFinMulti;
 import Interfaces.EcranFinSolo;
 import MoteurDeJeu.JeuController;
@@ -7,8 +5,8 @@ import MoteurDeJeu.JeuMulti;
 import MoteurDeJeu.JeuSolo;
 import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
-import MoteurGraphique.MoteurGraphiqueSolo;
 import MoteurGraphique.MoteurGraphiqueMulti;
+import MoteurGraphique.MoteurGraphiqueSolo;
 import Reseau.Reseau;
 
 public class MainClass {
@@ -93,7 +91,7 @@ public class MainClass {
         moteurGraphique.start();
 
         // Lancement du moteur reseau
-        Reseau reseau = new Reseau(ip);
+        Reseau reseau = new Reseau();
 
         //Lancement du moteur de jeu multi
         JeuMulti moteurJeu = new JeuMulti(moteurGraphique);
@@ -134,7 +132,10 @@ public class MainClass {
             }
 
             // On met à jour l'affichage
-            moteurGraphique.update(plateau, nextPiece, score, score2, moteurJeu.getMalus());
+            moteurGraphique.update(plateau, nextPiece, score, score2, moteurJeu.getMalusReceived());
+
+            //on envoi les données à l'autre joueur
+            reseau.update(score, moteurJeu.getMalus(), moteurJeu.isFinish());
 
             // Défini la vitesse du jeu
             try {

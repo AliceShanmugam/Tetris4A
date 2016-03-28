@@ -1,6 +1,5 @@
 package MoteurDeJeu;
 
-import MoteurDeJeu.Malus.Malus;
 import MoteurGraphique.MoteurGraphiqueMulti;
 
 public class JeuMulti extends Jeu {
@@ -19,7 +18,13 @@ public class JeuMulti extends Jeu {
         this.malusReceived = malus;
     }
 
-    public Object getMalus() {
+    public Malus getMalus() {
         return malusSent;
+    }
+
+    public Malus getMalusReceived() {
+        Malus ret = malusReceived;
+        malusReceived = null;
+        return ret;
     }
 }
