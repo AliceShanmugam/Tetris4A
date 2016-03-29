@@ -1,9 +1,9 @@
 import Interfaces.EcranFinMulti;
 import Interfaces.EcranFinSolo;
-import MoteurDeJeu.JeuController;
 import MoteurDeJeu.JeuMulti;
 import MoteurDeJeu.JeuSolo;
-import MoteurDeJeu.Pieces.Piece;
+import MoteurDeJeu.PieceFactory;
+import MoteurDeJeu.Pieces.*;
 import MoteurDeJeu.Plateau;
 import MoteurGraphique.MoteurGraphiqueMulti;
 import MoteurGraphique.MoteurGraphiqueSolo;
@@ -13,7 +13,7 @@ public class MainClass {
 
     public static void main (String[] args){
 
-        System.out.print("AADEWDAD");
+        /*System.out.print("AADEWDAD");
         JeuController controller = new JeuController();
         javax.swing.SwingUtilities.invokeLater(()-> controller.createAndShowGUI());
 
@@ -35,6 +35,10 @@ public class MainClass {
             }
         }*/
 
+        PieceFactory factory = new PieceFactory();
+        Piece piece = factory.getRandomPiece();
+
+        System.out.println(piece);
     }
 
     // Partie Solo
