@@ -15,11 +15,18 @@ public class MainClass {
 
     public static void main (String[] args){
 
-        System.out.print("AADEWDAD");
         JeuController controller = new JeuController();
-        javax.swing.SwingUtilities.invokeLater(()-> controller.createAndShowGUI());
 
-        System.out.print("AADEWDAD");
+        while(!controller.isReady()){
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.print("ok");
        /* if(mainMenu.playGameSelected())
         {
             // Lancement de l'ecran d'accueil
@@ -27,7 +34,7 @@ public class MainClass {
 
             // On récupère le choix de l'utilisateur
             AccueilResult accueilResult = accueil.start();
-
+*/
             // Lancement du mode solo ou multi
             if (accueilResult.solo) {
                 startSolo();
@@ -35,7 +42,7 @@ public class MainClass {
             else {
                 startMulti(accueilResult.ip);
             }
-        }*/
+        }
 
     }
 

@@ -41,8 +41,12 @@ public class MainFrame extends JFrame {
         replacePanel(new CreditsPanel(getContentSize()));
     }
 
-    public void scoresPanel() {
-        //  replacePanel(new ScoresPanel(getContentSize()));
+    public void showPlayerTypePanel() {
+        replacePanel(new ChoosePlayerPanel(getContentSize()));
+    }
+
+    public void showScoresPanel() {
+          replacePanel(new ScoresPanel(getContentSize()));
     }
 
     public void replacePanel(Component component) {

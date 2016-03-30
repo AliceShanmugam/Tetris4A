@@ -25,11 +25,13 @@ public class MainMenuPanel  extends JPanel {
 
     private void addMenu() {
         JPanel menuWrapper = new JPanel();
-        menuWrapper.setLayout(new BoxLayout(menuWrapper, BoxLayout.Y_AXIS));
+        menuWrapper.setLayout(new GridBagLayout());
+
         playGameButton = new JButton();
         creditsButton = new JButton();
         scoresButton = new JButton();
 
+        setBackground(Color.BLACK);
         setButtons();
 
         menuWrapper.add(playGameButton);
@@ -40,7 +42,7 @@ public class MainMenuPanel  extends JPanel {
 
     public void setButtons()
     {
-        setBackground(Color.BLACK);
+
 
         System.out.println("r2dewdw");
 
@@ -63,6 +65,8 @@ public class MainMenuPanel  extends JPanel {
         creditsButton.setForeground(Color.GREEN);
         creditsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         System.out.println("r2dewdw");
+
+        //setLayout(new GridBagLayout());
     }
 
 

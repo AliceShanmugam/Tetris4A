@@ -15,6 +15,15 @@ public class JeuController {
 
     protected MainFrame frame;
     private MenuEvent.Listener menuListener;
+    private MenuEvent.Listener menuListener2;
+    private boolean ready;
+    private boolean solo;
+    private String ip;
+
+    public JeuController()
+    {
+        createAndShowGUI();
+    }
 
     public void createAndShowGUI() {
         frame = new MainFrame();
@@ -38,10 +47,17 @@ public class JeuController {
                 case credits:
                     showCreditsScreen();
                     break;
+                case menu:
+                    showMenuScreen();
+                    break;
             }
         };
 
         frame.showMainMenu(menuListener);
+    }
+
+    private void showMenuScreen() {
+        frame.showMainMenu(menuListener2);
     }
 
     private void showCreditsScreen() {
@@ -49,11 +65,19 @@ public class JeuController {
     }
 
     private void showScoresScreen() {
-        //     frame.showScoresPanel();
+             frame.showScoresPanel();
     }
     private void showPlayerTypeScreen() {
-        // frame.showPlayerTypePanel();
+         frame.showPlayerTypePanel();
     }
 
 
+    public boolean isReady() {
+        return ready;
+    }
+
+
+    public void setReady(boolean ready) {
+        this.ready = ready;
+    }
 }
