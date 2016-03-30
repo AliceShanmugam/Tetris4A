@@ -1,6 +1,6 @@
 package MoteurDeJeu;
 
-import MoteurGraphique.MoteurGraphiqueMulti;
+import MoteurGraphique.MoteurGraphique;
 
 public class JeuMulti extends Jeu {
 
@@ -10,7 +10,7 @@ public class JeuMulti extends Jeu {
     // Malus envoyé par le joueur adverse
     private Malus malusSent = null;
 
-    public JeuMulti(MoteurGraphiqueMulti moteurGraphique) {
+    public JeuMulti(MoteurGraphique moteurGraphique) {
 
     }
 

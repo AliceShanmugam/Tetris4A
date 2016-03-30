@@ -1,11 +1,14 @@
-package Interfaces;
+package MoteurGraphique;
+
+import MoteurGraphique.Panels.CreditsPanel;
+import MoteurGraphique.Panels.MainMenuPanel;
+import MoteurGraphique.Events.MenuEvent;
+import MoteurGraphique.Panels.PlayerSelectionPanel;
+import MoteurGraphique.Panels.SoloGamePanel;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by asusss on 22.03.2016.
- */
 public class MainFrame extends JFrame {
 
     final int WIDTH = 680;
@@ -24,11 +27,7 @@ public class MainFrame extends JFrame {
         setMinimumSize(size);
         setMaximumSize(size);
 
-
-
-
         setVisible(true);
-
     }
 
     public void showMainMenu(MenuEvent.Listener listener) {
@@ -37,12 +36,25 @@ public class MainFrame extends JFrame {
         menuPanel.setMenuEventListeners(listener);
     }
 
-    public void showCreditsPanel() {
-        replacePanel(new CreditsPanel(getContentSize()));
+    public void showCreditsPanel(MenuEvent.Listener listener) {
+        CreditsPanel creditsPanel = new CreditsPanel(getContentSize());
+        replacePanel(creditsPanel);
+        creditsPanel.setMenuEventListeners(listener);
     }
 
     public void scoresPanel() {
         //  replacePanel(new ScoresPanel(getContentSize()));
+    }
+
+    public void showPlayerTypePanel(MenuEvent.Listener listener) {
+        PlayerSelectionPanel menuPanel = new PlayerSelectionPanel();
+        replacePanel(menuPanel);
+        menuPanel.setMenuEventListeners(listener);
+    }
+
+    public void showGameSoloPanel() {
+        SoloGamePanel panel = new SoloGamePanel();
+        replacePanel(panel);
     }
 
     public void replacePanel(Component component) {

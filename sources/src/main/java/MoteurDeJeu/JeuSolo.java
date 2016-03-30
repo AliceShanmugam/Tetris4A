@@ -1,9 +1,9 @@
 package MoteurDeJeu;
 
-import MoteurGraphique.MoteurGraphiqueSolo;
+import MoteurGraphique.MoteurGraphique;
 
 public class JeuSolo extends Jeu {
 
-    public JeuSolo(MoteurGraphiqueSolo moteurGraphique) {
+    public JeuSolo(MoteurGraphique moteurGraphique) {
     }
 }

@@ -1,11 +1,10 @@
-package Interfaces;
+package MoteurGraphique.Panels;
+
+import MoteurGraphique.Events.MenuEvent;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by asusss on 22.03.2016.
- */
 public class CreditsPanel extends JPanel {
 
     // Variables declaration
@@ -105,6 +104,5 @@ public class CreditsPanel extends JPanel {
 
     public void setMenuEventListeners(MenuEvent.Listener listener) {
         menuButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.menu));
-
     }
 }

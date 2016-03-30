@@ -1,11 +1,10 @@
-package Interfaces;
+package MoteurGraphique.Panels;
+
+import MoteurGraphique.Events.MenuEvent;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by asusss on 22.03.2016.
- */
 public class MainMenuPanel  extends JPanel {
 
     private JButton playGameButton;
@@ -42,7 +41,6 @@ public class MainMenuPanel  extends JPanel {
     {
         setBackground(Color.BLACK);
 
-        System.out.println("r2dewdw");
 
         playGameButton.setPreferredSize(new Dimension(500,500));
         playGameButton.setText("PLAY GAME");
@@ -62,18 +60,7 @@ public class MainMenuPanel  extends JPanel {
         creditsButton.setBackground(new Color(0, 32, 48));
         creditsButton.setForeground(Color.GREEN);
         creditsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        System.out.println("r2dewdw");
     }
-
-
-
-    public boolean playGameSelected()
-    {
-        return playGameButton.getModel().isPressed();
-    }
-
-
-
 
     public void setMenuEventListeners(MenuEvent.Listener listener) {
         playGameButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.play));

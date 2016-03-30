@@ -1,49 +1,40 @@
-import Interfaces.EcranFinMulti;
-import Interfaces.EcranFinSolo;
 import MoteurDeJeu.*;
 import MoteurDeJeu.Pieces.*;
-import MoteurGraphique.MoteurGraphiqueMulti;
-import MoteurGraphique.MoteurGraphiqueSolo;
+import MoteurGraphique.MoteurGraphique;
 import Reseau.Reseau;
+
+import java.net.InetAddress;
 
 public class MainClass {
 
+
     public static void main (String[] args){
 
-        System.out.print("AADEWDAD");
-        JeuController controller = new JeuController();
-        javax.swing.SwingUtilities.invokeLater(()-> controller.createAndShowGUI());
+        MoteurGraphique moteurGraphique = new MoteurGraphique();
 
-        System.out.print("AADEWDAD");
-       /* if(mainMenu.playGameSelected())
-        {
-            // Lancement de l'ecran d'accueil
-            EcranAccueil accueil = new EcranAccueil();
-
-            // On récupère le choix de l'utilisateur
-            AccueilResult accueilResult = accueil.start();
-
-            // Lancement du mode solo ou multi
-            if (accueilResult.solo) {
-                startSolo();
+        while(!moteurGraphique.play){
+            System.out.print(moteurGraphique.play);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-            else {
-                startMulti(accueilResult.ip);
-            }
-        }*/
+        }
+
+        if (moteurGraphique.ip == null){
+            startSolo(moteurGraphique);
+        }
+        else{
+            startMulti(moteurGraphique, moteurGraphique.ip);
+        }
 
     }
 
     // Partie Solo
-    private static void startSolo() {
-
-        // Lancement du moteur graphique en mode solo
-        MoteurGraphiqueSolo moteurGraphique = new MoteurGraphiqueSolo();
-        moteurGraphique.start();
+    private static void startSolo(MoteurGraphique moteurGraphique) {
 
         //Lancement du moteur de jeu solo
         JeuSolo moteurJeu = new JeuSolo(moteurGraphique);
-
 
         // Initialisation des variables
         boolean finish = false;
@@ -64,7 +55,7 @@ public class MainClass {
             nextPiece = moteurJeu.getNextPiece();
 
             // On met à jour l'affichage
-            moteurGraphique.update(plateau, nextPiece, score);
+            moteurGraphique.showGameSolo(plateau, nextPiece, score);
 
             // Définit la vitesse du jeu
             try {
@@ -76,19 +67,16 @@ public class MainClass {
 
 
         // Affichage de l'ecran de fin
-        EcranFinSolo ecranFin = new EcranFinSolo(score);
-        ecranFin.show();
+        moteurGraphique.showEndScreenSolo(score);
     }
 
     // Partie Multi
-    private static void startMulti(String ip) {
-
-        // Lancement du moteur graphique en mode multi
-        MoteurGraphiqueMulti moteurGraphique = new MoteurGraphiqueMulti();
-        moteurGraphique.start();
+    private static void startMulti(MoteurGraphique moteurGraphique, InetAddress ip) {
 
         // Lancement du moteur reseau
         Reseau reseau = new Reseau();
+
+        System.out.print("multi");
 
         //Lancement du moteur de jeu multi
         JeuMulti moteurJeu = new JeuMulti(moteurGraphique);
@@ -129,7 +117,7 @@ public class MainClass {
             }
 
             // On met à jour l'affichage
-            moteurGraphique.update(plateau, nextPiece, score, score2, moteurJeu.getMalusReceived());
+            moteurGraphique.showGameMulti(plateau, nextPiece, score, score2, moteurJeu.getMalusReceived());
 
             //on envoi les données à l'autre joueur
             reseau.update(score, moteurJeu.getMalus(), moteurJeu.isFinish());
@@ -143,8 +131,7 @@ public class MainClass {
         }
 
         // Affichage de l'ecran de fin
-        EcranFinMulti ecranFin = new EcranFinMulti(score, score2, victoire);
-        ecranFin.show();
+        moteurGraphique.showEndScreenMulti(score, score2, victoire);
     }
 }
 
