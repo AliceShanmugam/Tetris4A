@@ -13,7 +13,6 @@ public class MainClass {
         MoteurGraphique moteurGraphique = new MoteurGraphique();
 
         while(!moteurGraphique.play){
-            System.out.print(moteurGraphique.play);
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {

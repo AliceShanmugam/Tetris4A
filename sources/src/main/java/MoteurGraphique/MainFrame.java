@@ -1,10 +1,7 @@
 package MoteurGraphique;
 
-import MoteurGraphique.Panels.CreditsPanel;
-import MoteurGraphique.Panels.MainMenuPanel;
+import MoteurGraphique.Panels.*;
 import MoteurGraphique.Events.MenuEvent;
-import MoteurGraphique.Panels.PlayerSelectionPanel;
-import MoteurGraphique.Panels.SoloGamePanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -42,8 +39,10 @@ public class MainFrame extends JFrame {
         creditsPanel.setMenuEventListeners(listener);
     }
 
-    public void scoresPanel() {
-        //  replacePanel(new ScoresPanel(getContentSize()));
+    public void showScoresPanel(MenuEvent.Listener listener) {
+        ScoresPanel panel = new ScoresPanel(getContentSize());
+        replacePanel(panel);
+        panel.setMenuEventListeners(listener);
     }
 
     public void showPlayerTypePanel(MenuEvent.Listener listener) {

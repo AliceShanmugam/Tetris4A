@@ -69,7 +69,14 @@ public class MoteurGraphique {
     }
 
     private void showScoresScreen() {
-        // frame.showScoresPanel();
+        menuListener = itemType -> {
+            switch (itemType) {
+                case menu:
+                    showMainMenuScreen();
+                    break;
+            }
+        };
+        frame.showScoresPanel(menuListener);
     }
 
     private void showPlayerTypeScreen() {
