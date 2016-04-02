@@ -21,16 +21,15 @@ public class SoloGamePanel extends JPanel {
     }
 
     private void addMenu() {
-        JPanel menuWrapper = new JPanel();
-        menuWrapper.setLayout(new BoxLayout(menuWrapper, BoxLayout.Y_AXIS));
-        text = new JLabel();
+        setLayout(new GridLayout());
 
-        text.setFont(new java.awt.Font("Helvetica", Font.BOLD, 26)); // NOI18N
-        text.setText("Solo Game");
-        text.setForeground(Color.BLUE);
 
-        menuWrapper.add(text);
-        add(menuWrapper, BorderLayout.CENTER);
+        GamePanel  gp= new GamePanel();
+
+        SidePanel sp= new SidePanel();
+
+        add(gp);
+        add(sp);
     }
 
 }
