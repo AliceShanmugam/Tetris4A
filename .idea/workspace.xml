@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1949e8e-8a91-4793-a4cb-6dfd950f8233" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/HighScore/HighScoreComparator.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/HighScore/HighScoreManager.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/HighScore/Score.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teris_scores.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/ScoresPanel.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/ScoresPanel.java" />
     </list>
     <ignored path="Tetris4A.iws" />
@@ -107,8 +118,8 @@
       <file leaf-file-name="ScoresPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/ScoresPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51077944">
-              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.69320065">
+              <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -941,8 +952,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/ScoresPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51077944">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.69320065">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
           <folding />
         </state>
       </provider>
