@@ -1,5 +1,7 @@
 package MoteurDeJeu;
 
+import MoteurDeJeu.Pieces.Piece;
+
 public class Plateau {
     public int[][] tab;
     public static int hauteur = 20;
@@ -76,6 +78,12 @@ public class Plateau {
             }
         }
 
+        for (int i=0; i < largeur; i++){
+            if(tab[i][0] < 0) {
+                ret = true;
+            }
+        }
+
         return ret;
     }
 
@@ -88,6 +96,12 @@ public class Plateau {
                 if(tab[i][j] < 0 && tab[i-1][j] > 0){
                     ret = true;
                 }
+            }
+        }
+
+        for (int j=0; j < hauteur; j++){
+            if(tab[0][j] < 0){
+                ret = true;
             }
         }
 
@@ -106,9 +120,96 @@ public class Plateau {
             }
         }
 
+        for (int j=0; j < hauteur; j++){
+            if(tab[largeur-1][j] < 0){
+                ret = true;
+            }
+        }
+
         return ret;
     }
 
+    //------------------
+    // Ajout de piece
+    //------------------
+
+    // Ajoute une piece centré en i,j
+    public void addPiece(Piece piece, int i, int j){
+        if (i>0 && j<hauteur-1 && piece.tab[0][0]!=0) tab[i-1][j+1] = piece.tab[0][0] * -1;
+        if ( j<hauteur-1 && piece.tab[0][1]!=0) tab[i][j+1] = piece.tab[0][1] * -1;
+        if (i<largeur-1 && j<hauteur-1 && piece.tab[0][2]!=0) tab[i+1][j+1] = piece.tab[0][2] * -1;
+
+        if (i>0 && piece.tab[1][0]!=0) tab[i-1][j] = piece.tab[1][0] * -1;
+        if (piece.tab[1][1]!=0) tab[i][j] = piece.tab[1][1] * -1;
+        if (i<largeur-1 && piece.tab[1][2]!=0) tab[i+1][j] = piece.tab[1][2] * -1;
+
+        if (i>0 && j>0 && piece.tab[2][0]!=0) tab[i-1][j-1] = piece.tab[2][0] * -1;
+        if (j>0 && piece.tab[2][1]!=0) tab[i][j-1] = piece.tab[2][1] * -1;
+        if (i<largeur-1 && j>0 && piece.tab[2][2]!=0) tab[i+1][j-1] = piece.tab[2][2] * -1;
+    }
+
+    // Vérifie si l'on peut ajouter la piece en i,j (i != 0, i!= largeur-1, j != 0
+    public boolean canAddPiece(Piece piece, int i, int j){
+
+        // hors de bornes
+        if(i < 0 || i > largeur-1 || j <= 0 || j >= hauteur-1){
+            return false;
+        }
+
+        // dépasse à gauche
+        if (i==0){
+            if (piece.tab[0][0] + piece.tab[1][0] + piece.tab[2][0] == 0){
+                if (piece.tab[0][1] != 0 && tab[i][j+1]!=0 ) return false;
+                if (piece.tab[0][2] != 0 && tab[i+1][j+1]!=0 ) return false;
+
+                if (piece.tab[1][1] != 0 && tab[i][j]!=0 ) return false;
+                if (piece.tab[1][2] != 0 && tab[i+1][j]!=0 ) return false;
+
+                if (piece.tab[2][1] != 0 && tab[i][j-1]!=0 ) return false;
+                if (piece.tab[2][2] != 0 && tab[i+1][j-1]!=0 ) return false;
+
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        // dépasse à droite
+        if (i==largeur-1){
+            if (piece.tab[0][2] + piece.tab[1][2] + piece.tab[2][2] == 0){
+                if (piece.tab[0][0] != 0 && tab[i-1][j+1]!=0 ) return false;
+                if (piece.tab[0][1] != 0 && tab[i][j+1]!=0 ) return false;
+
+                if (piece.tab[1][0] != 0 && tab[i-1][j]!=0 ) return false;
+                if (piece.tab[1][1] != 0 && tab[i][j]!=0 ) return false;
+
+                if (piece.tab[2][0] != 0 && tab[i-1][j-1]!=0 ) return false;
+                if (piece.tab[2][1] != 0 && tab[i][j-1]!=0 ) return false;
+
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        // Verifie les colisions
+
+        if (piece.tab[0][0] != 0 && tab[i-1][j+1]!=0 ) return false;
+        if (piece.tab[0][1] != 0 && tab[i][j+1]!=0 ) return false;
+        if (piece.tab[0][2] != 0 && tab[i+1][j+1]!=0 ) return false;
+
+        if (piece.tab[1][0] != 0 && tab[i-1][j]!=0 ) return false;
+        if (piece.tab[1][1] != 0 && tab[i][j]!=0 ) return false;
+        if (piece.tab[1][2] != 0 && tab[i+1][j]!=0 ) return false;
+
+        if (piece.tab[2][0] != 0 && tab[i-1][j-1]!=0 ) return false;
+        if (piece.tab[2][1] != 0 && tab[i][j-1]!=0 ) return false;
+        if (piece.tab[2][2] != 0 && tab[i+1][j-1]!=0 ) return false;
+
+        return true;
+    }
 
     //-------------------
     // Autre méthodes
@@ -154,12 +255,32 @@ public class Plateau {
         return ret;
     }
 
+    //Convertit le bloc tombant en structure
+    public void stopPiece(){
+        for (int i=0; i < largeur; i++){
+            for (int j=0; j < hauteur; j++){
+                if (tab[i][j] < 0){
+                    tab[i][j] = -1 * tab[i][j];
+                }
+            }
+        }
+    }
 
+    // Renvoi si la structure a atteint le haut
+    public boolean topReached() {
+        for (int i=0; i<largeur; i++){
+            if (tab[i][hauteur-1] > 0 ) return true;
+        }
+
+        return false;
+    }
+
+    // Pour l'affichage dans la console
     public String toString(){
         String ret = "";
 
-        for (int i=0;i<largeur;i++){
-            for (int j=0;j<largeur;j++){
+        for (int j=hauteur-1; j >= 0; j--){
+            for (int i=0; i < largeur; i++){
                 ret += tab[i][j];
             }
             ret += "\n";

@@ -5,13 +5,13 @@ import MoteurGraphique.Events.MenuEvent;
 import javax.swing.*;
 import java.awt.*;
 
-public class PlayerSelectionPanel extends JPanel {
+public class MultiPlayerSelectionPanel extends JPanel {
 
     private JButton playSoloButton;
     private JButton playMultiButton;
     private JButton menuButton;
 
-    public PlayerSelectionPanel() {
+    public MultiPlayerSelectionPanel() {
         initComponents();
     }
 
@@ -43,27 +43,25 @@ public class PlayerSelectionPanel extends JPanel {
 
 
         playSoloButton.setPreferredSize(new Dimension(500,500));
-        playSoloButton.setText("PLAY SOLO");
+        playSoloButton.setText("");
         playSoloButton.setBackground(new Color(0, 32, 48));
         playSoloButton.setForeground(Color.GREEN);
         playSoloButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
 
-        playMultiButton.setText("PLAY MULTI");
+        playMultiButton.setText("");
         playMultiButton.setForeground(Color.GREEN);
         playMultiButton.setBackground(new Color(0, 32, 48));
         playMultiButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        menuButton.setText("MAIN MENU");
+        menuButton.setText("BACK");
         menuButton.setBackground(new Color(0, 32, 48));
         menuButton.setForeground(Color.LIGHT_GRAY);
     }
 
 
     public void setMenuEventListeners(MenuEvent.Listener listener) {
-        playSoloButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.playSolo));
-        playMultiButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.playMulti));
-        menuButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.menu));
+        menuButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.back));
     }
 
 }

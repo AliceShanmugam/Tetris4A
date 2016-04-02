@@ -54,6 +54,7 @@ public class MainFrame extends JFrame {
         menuPanel.setMenuEventListeners(listener);
     }
 
+<<<<<<< HEAD
     public void showGameSoloPanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
         SoloGamePanel panel = new SoloGamePanel(plateau, nextPiece, score,  score2, malusReceived,  isMulti);
         replacePanel(panel);
@@ -61,6 +62,19 @@ public class MainFrame extends JFrame {
 
     public void showGameMultiPanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
         MultiGamePanel panel = new MultiGamePanel(plateau, nextPiece, score,  score2, malusReceived,  isMulti);
+||||||| merged common ancestors
+    public void showGameSoloPanel() {
+        SoloGamePanel panel = new SoloGamePanel();
+=======
+    public void showMultiPlayerPanel(MenuEvent.Listener listener) {
+        MultiPlayerSelectionPanel panel = new MultiPlayerSelectionPanel();
+        replacePanel(panel);
+        panel.setMenuEventListeners(listener);
+    }
+
+    public void showGameSoloPanel() {
+        SoloGamePanel panel = new SoloGamePanel();
+>>>>>>> 2a52e88836de9f52e95c9ebe1ca746b31aab59e4
         replacePanel(panel);
     }
 
