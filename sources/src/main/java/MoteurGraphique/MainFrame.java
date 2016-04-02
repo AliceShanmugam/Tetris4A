@@ -51,6 +51,12 @@ public class MainFrame extends JFrame {
         menuPanel.setMenuEventListeners(listener);
     }
 
+    public void showMultiPlayerPanel(MenuEvent.Listener listener) {
+        MultiPlayerSelectionPanel panel = new MultiPlayerSelectionPanel();
+        replacePanel(panel);
+        panel.setMenuEventListeners(listener);
+    }
+
     public void showGameSoloPanel() {
         SoloGamePanel panel = new SoloGamePanel();
         replacePanel(panel);

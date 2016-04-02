@@ -5,6 +5,8 @@ import MoteurDeJeu.Malus;
 import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
 import MoteurGraphique.Events.MenuEvent;
+import Reseau.Reseau;
+import Reseau.Client;
 
 import javax.swing.*;
 import java.net.InetAddress;
@@ -89,6 +91,9 @@ public class MoteurGraphique {
                 case playMulti:
                     showMultiPlayerScreen();
                     break;
+                case menu:
+                    showMainMenuScreen();
+                    break;
             }
         };
 
@@ -97,6 +102,15 @@ public class MoteurGraphique {
 
     private void showMultiPlayerScreen() {
 
+        menuListener = itemType -> {
+            switch (itemType) {
+                case back:
+                    showPlayerTypeScreen();
+                    break;
+            }
+        };
+
+        frame.showMultiPlayerPanel(menuListener);
     }
 
     public void showEndScreenSolo(int score) {

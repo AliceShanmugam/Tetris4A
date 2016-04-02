@@ -13,4 +13,8 @@
 hs_err_pid*
 
 sources/.idea/*
+sources/.idea/workspace.xml
 .idea/*
+.idea/workspace.xml
+
+tetris_scores.txt
