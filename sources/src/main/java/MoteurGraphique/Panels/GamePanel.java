@@ -26,8 +26,8 @@ public class GamePanel extends JPanel {
     private Plateau plateau;
 
 
-    public GamePanel() {
-        plateau= new Plateau();
+    public GamePanel(Plateau p) {
+        plateau= p;
     }
 
 

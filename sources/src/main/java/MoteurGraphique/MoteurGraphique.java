@@ -107,11 +107,12 @@ public class MoteurGraphique {
 
     }
 
-    public void showGameSolo(Plateau plateau, Piece nextPiece, int score) {
-        frame.showGameSoloPanel();
+    public void showGame(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
+
+        if(!isMulti)
+            frame.showGameSoloPanel(plateau, nextPiece, score,  score2, malusReceived,  isMulti);
+        else
+            frame.showGameMultiPanel(plateau, nextPiece, score,  score2, malusReceived,  isMulti);
     }
 
-    public void showGameMulti(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived) {
-
-    }
 }

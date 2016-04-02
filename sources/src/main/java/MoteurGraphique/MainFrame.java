@@ -1,5 +1,8 @@
 package MoteurGraphique;
 
+import MoteurDeJeu.Malus;
+import MoteurDeJeu.Pieces.Piece;
+import MoteurDeJeu.Plateau;
 import MoteurGraphique.Panels.*;
 import MoteurGraphique.Events.MenuEvent;
 
@@ -51,8 +54,13 @@ public class MainFrame extends JFrame {
         menuPanel.setMenuEventListeners(listener);
     }
 
-    public void showGameSoloPanel() {
-        SoloGamePanel panel = new SoloGamePanel();
+    public void showGameSoloPanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
+        SoloGamePanel panel = new SoloGamePanel(plateau, nextPiece, score,  score2, malusReceived,  isMulti);
+        replacePanel(panel);
+    }
+
+    public void showGameMultiPanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
+        MultiGamePanel panel = new MultiGamePanel(plateau, nextPiece, score,  score2, malusReceived,  isMulti);
         replacePanel(panel);
     }
 

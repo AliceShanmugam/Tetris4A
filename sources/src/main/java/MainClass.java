@@ -8,7 +8,10 @@ import java.net.InetAddress;
 public class MainClass {
 
 
+    private static boolean isMulti=false;
+
     public static void main (String[] args){
+
 
         MoteurGraphique moteurGraphique = new MoteurGraphique();
 
@@ -21,9 +24,11 @@ public class MainClass {
         }
 
         if (moteurGraphique.ip == null){
+            isMulti=false;
             startSolo(moteurGraphique);
         }
         else{
+            isMulti=true;
             startMulti(moteurGraphique, moteurGraphique.ip);
         }
 
@@ -34,6 +39,7 @@ public class MainClass {
 
         //Lancement du moteur de jeu solo
         JeuSolo moteurJeu = new JeuSolo(moteurGraphique);
+
 
         // Initialisation des variables
         boolean finish = false;
@@ -54,7 +60,7 @@ public class MainClass {
             nextPiece = moteurJeu.getNextPiece();
 
             // On met à jour l'affichage
-            moteurGraphique.showGameSolo(plateau, nextPiece, score);
+            moteurGraphique.showGame(plateau, nextPiece, score,-1, null,isMulti);
 
             // Définit la vitesse du jeu
             try {
@@ -116,7 +122,7 @@ public class MainClass {
             }
 
             // On met à jour l'affichage
-            moteurGraphique.showGameMulti(plateau, nextPiece, score, score2, moteurJeu.getMalusReceived());
+            moteurGraphique.showGame(plateau, nextPiece, score, score2, moteurJeu.getMalusReceived(),isMulti);
 
             //on envoi les données à l'autre joueur
             reseau.update(score, moteurJeu.getMalus(), moteurJeu.isFinish());

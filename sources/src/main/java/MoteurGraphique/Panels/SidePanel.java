@@ -4,6 +4,7 @@ package MoteurGraphique.Panels;
  * Created by asusss on 2.04.2016.
  */
 import MoteurDeJeu.Jeu;
+import MoteurDeJeu.Malus;
 import MoteurDeJeu.Pieces.*;
 
 import java.awt.*;
@@ -42,11 +43,20 @@ public class SidePanel extends JPanel {
     private Graphics2D g2d;
 
     private Jeu tetris;
+    private Piece nextPiece;
+    private int score,score2;
+    private Malus malus;
+    private boolean isMulti;
 
-    public SidePanel() {
+    public SidePanel(Piece nextPiece, int score, int score2, Malus malusReceived,boolean isMulti) {
 
         setPreferredSize(new Dimension(100, 100));
         setBackground(Color.BLACK);
+        this.nextPiece=nextPiece;
+        this.score=score;
+        this.score2=score2;
+        this.malus=malusReceived;
+        this.isMulti=isMulti;
     }
 
     @Override
@@ -60,7 +70,7 @@ public class SidePanel extends JPanel {
         drawStat();
 
         //get next piece
-        Piece p= new Piece4();
+        Piece p= nextPiece;
         // utilise ligne suivant quand  getNextPiece fonction a implemente
        // Piece p = tetris.getNextPiece();
         if(p!= null) {
@@ -89,8 +99,13 @@ public class SidePanel extends JPanel {
         g2d.setFont(LARGE_FONT);
         g2d.drawString("Stats", SMALL_INSET, offset = STATS_INSET);
         g2d.setFont(SMALL_FONT);
-        g2d.drawString("Score: " + "GET SCORE METHOD", LARGE_INSET, offset += TEXT_STRIDE);
+        g2d.drawString("Score: " + score, LARGE_INSET, offset += TEXT_STRIDE);
 
+        if(isMulti)
+            g2d.drawString("Other Player's Score: " + score2, LARGE_INSET, offset += TEXT_STRIDE);
+
+        // MALUS will be added.......
+        // **********
 
         g2d.setFont(LARGE_FONT);
         g2d.drawString("Controls", SMALL_INSET, offset = CONTROLS_INSET);
