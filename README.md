@@ -17,6 +17,8 @@ Voici une représentation de l'architecture globale de l'application :
 
 ![alt tag](doc/package.png)
 
+Cette architecture nous a permis de séparer notre projet en 3 différentes problématiques : Les graphiqmes, la logique du jeu et le réeau. Ainsi chacun peut se concentrer uniquement sur sa tâche. Le main permet de faire travailler ensemble les trois partie.
+
 ### Package moteur de jeu
 
 Le package est architecturé de la façon suivante :
@@ -43,8 +45,6 @@ Ce package a un fonctionnement asser simple, la classe MoteurGraphique ce charge
 
 Nous avons conçus la partie réseau comme une application P2P simple.
 
-![alt tag](doc/reseau.png)
-
 Nous détaillerons son fonctionnement dans la partie exercice.
 
 ### Package test
@@ -54,3 +54,10 @@ Le package Test contient les tests unitaires du projet. Une classe MainTest perm
 ![alt tag](doc/test.png)
 
 ## Exercice Design Pattern / Solid
+
+### Jeu, JeuSolo et JeuMulti
+
+### Pieces et Factory
+
+### Reseau
+
