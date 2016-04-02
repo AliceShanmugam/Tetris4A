@@ -15,30 +15,49 @@ De plus nous avons aussi développé un package test qui contient tous les tests
 
 Voici une représentation de l'architecture globale de l'application :
 
-IMAGE
+![alt tag](doc/package.png)
+
+Cette architecture nous a permis de séparer notre projet en 3 différentes problématiques : Les graphiqmes, la logique du jeu et le réeau. Ainsi chacun peut se concentrer uniquement sur sa tâche. Le main permet de faire travailler ensemble les trois partie.
 
 ### Package moteur de jeu
 
 Le package est architecturé de la façon suivante :
 
-IMAGE
+![alt tag](doc/moteurJeu.png)
 
 La classe Jeu définit un moteur de jeu dans sa généralité : Il contient un plateau de jeu, une prochaine piece à tomber, un score, etc.
 
 Les classes JeuSolo et JeuMulti sont des spécialisations de cette classe, par exemple JeuMulti intégre un deuxième score et sait gérer les malus.
 
-Un plateau de jeu définit ce qu'est un plateau tetris, ce plateau sera envoyé au moteur graphqiue pour u'il soit affiché.
+Un plateau de jeu définit ce qu'est un plateau tetris, ce plateau sera envoyé au moteur graphqiue pour qu'il soit affiché.
 
-Les pieces sont gérés par PieceFactory, nous détaillons sont fonctionnement dans la partie "Exercice Desing Patern".
+Les pieces sont gérés par la classe PieceFactory, nous détaillerons sont fonctionnement dans la partie "Exercice Desing Patern".
 
-Les Malus sont gérés par MalusFactory.
+Les Malus sont gérés par la classe MalusFactory.
 
 ### Package moteur graphique
 
-Ce package a un fonctionnement 
+Ce package a un fonctionnement asser simple, la classe MoteurGraphique ce charge d'invoquer l'interface graphique et de lancer la frame principale MainFrame qui se charge d'afficher les vues nécessaires. Les vues sont dans le dossier Panels et les différent type d'événements sont défini dans le dossier Events.
+
+![alt tag](doc/moteurgraphique.png)
 
 ### Package moteur réseau
 
+Nous avons conçus la partie réseau comme une application P2P simple.
+
+Nous détaillerons son fonctionnement dans la partie exercice.
+
 ### Package test
 
+Le package Test contient les tests unitaires du projet. Une classe MainTest permet de lancer les tests contenu dans les différentes classes du package.
+
+![alt tag](doc/test.png)
+
 ## Exercice Design Pattern / Solid
+
+### Jeu, JeuSolo et JeuMulti
+
+### Pieces et Factory
+
+### Reseau
+
