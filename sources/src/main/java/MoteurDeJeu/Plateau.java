@@ -4,8 +4,8 @@ import MoteurDeJeu.Pieces.Piece;
 
 public class Plateau {
     public int[][] tab;
-    public static int hauteur = 10;
-    public static int largeur = 5;
+    public static int hauteur = 20;
+    public static int largeur = 12;
 
     public Plateau(){
         tab = new int[largeur][hauteur];

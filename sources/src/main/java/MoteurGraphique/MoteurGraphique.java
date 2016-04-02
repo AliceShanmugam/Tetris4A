@@ -5,8 +5,6 @@ import MoteurDeJeu.Malus;
 import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
 import MoteurGraphique.Events.MenuEvent;
-import Reseau.Reseau;
-import Reseau.Client;
 
 import javax.swing.*;
 import java.net.InetAddress;
