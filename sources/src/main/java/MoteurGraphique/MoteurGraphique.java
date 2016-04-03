@@ -127,11 +127,11 @@ public class MoteurGraphique {
 
     public void showEndScreenSolo(int score) {
 
-        frame.showResultPanel(score,-1,false);
+        frame.showResultPanel(menuListener,score,-1,false);
     }
 
     public void showEndScreenMulti(int score1, int score2, boolean victory) {
-        frame.showResultPanel(score1,score2,victory);
+        frame.showResultPanel(menuListener,score1,score2,victory);
     }
 
     public void showGame(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {

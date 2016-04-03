@@ -110,8 +110,9 @@ public class SidePanel extends JPanel {
         g2d.setFont(LARGE_FONT);
         g2d.drawString("Controls", SMALL_INSET, offset = CONTROLS_INSET);
         g2d.setFont(SMALL_FONT);
-        g2d.drawString("UP - Move Left ?", LARGE_INSET, offset += TEXT_STRIDE);
-        g2d.drawString("DOWN - Rotate Piece ?", LARGE_INSET, offset += TEXT_STRIDE);
+        g2d.drawString("UP - DOWN Rotates the piece", LARGE_INSET, offset += TEXT_STRIDE);
+        g2d.drawString("LEFT - sets piece position to the left", LARGE_INSET, offset += TEXT_STRIDE);
+        g2d.drawString("RIGHT - sets piece position to the right", LARGE_INSET, offset += TEXT_STRIDE);
 
         g2d.setFont(LARGE_FONT);
         g2d.drawString("Next Piece:", SMALL_INSET, 70);
