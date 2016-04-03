@@ -6,14 +6,13 @@ Maxime Fernandez
 
 ## Build an Run
 
-Pour build le projet il faut lancer la commande
-
+Pour build le projet il faut lancer la commande : </br>
+<code>nvm clean install</code>
 
 Pour lancer le jeu il faut lancer la commande : </br>
 <code>java -cp tetris.jar MainClass</code>
 
-Pour lancer les tests unitaires : </br>
-<code>java -cp tetris.jar MainTest</code>
+Pour lancer les tests unitaires il faut lancer la classe MainTest.
 
 ## Features
 
