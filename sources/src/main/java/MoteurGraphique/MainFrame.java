@@ -93,6 +93,14 @@ public class MainFrame extends JFrame implements KeyListener {
         }
     }
 
+    public void showResultPanel(MenuEvent.Listener listener,int score, int score2, boolean victory) {
+
+        EndGamePanel panel = new EndGamePanel(score,score2,victory);
+        replacePanel(panel);
+        panel.setMenuEventListeners(listener);
+
+    }
+
 
     public void showMultiPlayerPanel(ReseauEvent reseauEvent, String ip) {
         MultiPlayerSelectionPanel panel = new MultiPlayerSelectionPanel(ip);

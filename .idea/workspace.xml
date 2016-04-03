@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1949e8e-8a91-4793-a4cb-6dfd950f8233" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/GamePanel.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/GamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiGamePanel.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiGamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/PlayerSelectionPanel.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/PlayerSelectionPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/EndGamePanel.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/EndGamePanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java" afterPath="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teris_scores.txt" afterPath="$PROJECT_DIR$/teris_scores.txt" />
     </list>
     <ignored path="Tetris4A.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,17 +31,37 @@
         <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/GamePanel.java">
+      <file leaf-file-name="JeuSolo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/JeuSolo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5595777">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jeu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/Jeu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EndGamePanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/EndGamePanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5022625">
+              <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,33 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiGamePanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiGamePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8055553">
-              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiPlayerSelectionPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiPlayerSelectionPanel.java">
+      <file leaf-file-name="CreditsPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/CreditsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerSelectionPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/PlayerSelectionPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -90,30 +83,17 @@
         <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="e#2510#2511#0" expanded="true" />
-                <element signature="e#2561#2562#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Events/MenuEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoteurGraphique.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java">
+      <file leaf-file-name="ScoresPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/ScoresPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+              <caret line="79" column="1" selection-start-line="8" selection-start-column="25" selection-end-line="79" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -123,19 +103,27 @@
         <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plateau.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/Plateau.java">
+      <file leaf-file-name="MoteurGraphique.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <caret line="129" column="43" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/src/main/java/MainClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -170,13 +158,14 @@
         <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MuliGamePanel.java" />
         <option value="$PROJECT_DIR$/sources/src/main/java/MainClass.java" />
         <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java" />
-        <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java" />
         <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiGamePanel.java" />
-        <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java" />
         <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/PlayerSelectionPanel.java" />
-        <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java" />
         <option value="$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/Plateau.java" />
         <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/GamePanel.java" />
+        <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java" />
+        <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java" />
+        <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java" />
+        <option value="$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/EndGamePanel.java" />
       </list>
     </option>
   </component>
@@ -246,8 +235,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -402,7 +392,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -753,6 +742,9 @@
     </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a1949e8e-8a91-4793-a4cb-6dfd950f8233" name="Default" comment="" />
@@ -790,6 +782,14 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -802,6 +802,113 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiGamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiPlayerSelectionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/PlayerSelectionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#309#310#0" expanded="false" />
+            <element signature="e#341#342#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Events/MenuEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/Plateau.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <marker date="1459688130340" expanded="true" signature="196:385" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="391:472" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="578:830" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="901:1153" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="1225:1480" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="1486:1569" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="1646:2044" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="2120:2517" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="2594:3002" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="3008:3075" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="3166:3926" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="4068:6265" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="6271:6340" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="6422:7312" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="7386:7605" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="7687:7819" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -825,7 +932,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="123" selection-start-line="14" selection-start-column="123" selection-end-line="14" selection-end-column="123" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -842,10 +949,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="109" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="109" />
-          <folding>
-            <element signature="e#2510#2511#0" expanded="true" />
-            <element signature="e#2561#2562#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -880,16 +984,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
-            <element signature="e#1912#1913#0" expanded="false" />
-            <element signature="e#1940#1941#0" expanded="false" />
-            <element signature="e#1975#1976#0" expanded="false" />
-            <element signature="e#2005#2006#0" expanded="false" />
-            <element signature="e#2034#2035#0" expanded="false" />
-            <element signature="e#2062#2063#0" expanded="false" />
-            <element signature="e#2095#2096#0" expanded="false" />
-            <element signature="e#2124#2125#0" expanded="false" />
-            <element signature="e#2159#2160#0" expanded="false" />
-            <element signature="e#2191#2192#0" expanded="false" />
+            <element signature="e#3762#3763#0" expanded="false" />
+            <element signature="e#3884#3885#0" expanded="false" />
+            <element signature="e#4015#4016#0" expanded="false" />
+            <element signature="e#4013#4014#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -898,9 +996,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,14 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="52" column="70" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/CreditsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -998,63 +1086,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#1912#1913#0" expanded="false" />
-            <element signature="e#1940#1941#0" expanded="false" />
-            <element signature="e#1975#1976#0" expanded="false" />
-            <element signature="e#2005#2006#0" expanded="false" />
-            <element signature="e#2034#2035#0" expanded="false" />
-            <element signature="e#2062#2063#0" expanded="false" />
-            <element signature="e#2095#2096#0" expanded="false" />
-            <element signature="e#2124#2125#0" expanded="false" />
-            <element signature="e#2159#2160#0" expanded="false" />
-            <element signature="e#2191#2192#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="133" column="36" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/JeuSolo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.4193548">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/ScoresPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1067,31 +1102,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#2510#2511#0" expanded="true" />
-            <element signature="e#2561#2562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiGamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8055553">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1099,8 +1115,10 @@
     <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/MultiPlayerSelectionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
-          <folding />
+          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,16 +1126,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#309#310#0" expanded="false" />
+            <element signature="e#341#342#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1125,15 +1137,114 @@
     <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/Plateau.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <marker date="1459688130340" expanded="true" signature="196:385" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="391:472" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="578:830" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="901:1153" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="1225:1480" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="1486:1569" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="1646:2044" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="2120:2517" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="2594:3002" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="3008:3075" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="3166:3926" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="4068:6265" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="6271:6340" placeholder="//..." />
+            <marker date="1459688130340" expanded="true" signature="6422:7312" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="7386:7605" placeholder="{...}" />
+            <marker date="1459688130340" expanded="true" signature="7687:7819" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5595777">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/ScoresPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="1" selection-start-line="8" selection-start-column="25" selection-end-line="79" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SoloGamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/JeuSolo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurDeJeu/Jeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/CreditsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/MoteurGraphique.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="43" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/SidePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/src/main/java/MoteurGraphique/Panels/EndGamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5022625">
+          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
