@@ -41,7 +41,7 @@ Ce package a un fonctionnement assez simple, la classe MoteurGraphique se charge
 
 ![alt tag](doc/moteurgraphique.png)
 
-### Package moteur réseau
+### Package réseau
 
 Nous avons conçu la partie réseau comme une application P2P simple.
 
@@ -57,7 +57,47 @@ Le package Test contient les tests unitaires du projet. Une classe MainTest perm
 
 ### Jeu, JeuSolo et JeuMulti
 
+Pour représenter la partie logique du jeu Tetris nous avons créé une classe Jeu qui représente ce qu'est un jeu, c'est à dire qu'elle contient un tableau de jeu, un ensemble de pièces, un score et des méthodes pour bouger les pièces et faire exploser les lignes.
+
+Ensuite nous avons les classes JeuSolo et JeuMulti qui sont des spécialisations de la classe Jeu. Ils définissent les particularités propre à chaque mode de jeu : Pour jeu multi il défini un deuxième score et il sais générer et recevoir des malus, par contre il ne défini rien en lien avec le réseau, car ce n'est pas son rôle.
+
+![alt tag](doc/Jeu.png)
+
+Ainsi on peut dire que ces classes ont une seule résponsabilité (S).
+
+Elles sont ouverte à l'extension car on peut imaginer un nouveau mode de jeu et le faire hérité de Jeu (O).
+
+JeuSolo et JeuMulti peuvent se comporter comme Jeu sans aucun problème (L).
+
+Dans notre architecture chaque classe a sa propre interface mais elle sont toute identiques... (~I).
+
+Toute notre archiecture repose sur la maniulation d'objets abstraits (Plateau, Piece, Jeu, ...) on peut modifier leurs implémentations sans modifier le reste de l'application, sauf pour l'affichage qui utilise l'implémentation concrète (matrices) pour pouvoir les afficher. (D).
+
 ### Pieces et Factory
+
+Pour notre programme nous avions besoin de générer un certain nombre d'objets semblables : les pièces. Pour répondre à celà nous avons fait le choix d'utiliser le Design Patern de la Factory.
+
+Notre implémentation est simple : Nous avons une classe Piece qui défini ce qu'est une pièce dans sa généralité: une matrice que l'on peut tourner à gauche ou à droite. Des classe Piece1..N qui hérite de Piece et qui définissent concrètement la forme de la pièce. Enfin, une classe PieceFactory qui permet de renvoyer aléatoirement une des pièces existante.
+
+![alt tag](doc/Pieces.png)
+
+Cette architecture nous permet de définir et de modifier autant de pièces que l'on souhaite sans aucun impact sur le reste de l'architecture, seul PieceFactory contient une liste des pièces disponibles.
+
+Nous avons aussi mis en place une Factory pour les Malus.
 
 ### Reseau
 
+Pour le réseau nous avons développer une architecture P2P simple : Une classe principale Reseau qui instancie dans deux nouveaux Thread un Serveur et un Client. Le serveur est chargé de récupérer les messages et le client est chargé de les envoyer.
+Les messages à envoyer ou revecoir sont normalisés et sont définis dans la classe Serveur.
+
+![alt tag](doc/reseau.png)
+
+Ainsi cette architecture octroie une tâche unique à chaque classe (S).
+
+Elle est relativement ouverte à l'extension car on peut définir de nouveaux types de messages facilement (O).
+
+On peut imaginer une sous calsses de Reseau qui permetrai de faire plus de choses mais qui pourai être utilisé comme la classe Reseau (L).
+
+La partie réseau fonctionne avec une seule interface: la classe Reseau (L).
+
+Les appels vers client et Serveur sont totalement indépendant de leurs implémentations, on pourrai par exemple changer de protocole en toute transparence pour le reste de l'application (D).
