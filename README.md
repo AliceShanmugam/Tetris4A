@@ -71,7 +71,7 @@ JeuSolo et JeuMulti peuvent se comporter comme Jeu sans aucun problème (L).
 
 Dans notre architecture chaque classe a sa propre interface mais elles sont toutes identiques... (~I).
 
-Toute notre archiecture repose sur la manipulation d'objets abstraits (Plateau, Piece, Jeu, ...), on peut modifier leurs implémentations sans modifier le reste de l'application, sauf pour l'affichage qui utilise l'implémentation concrète (matrices) pour pouvoir les afficher. (D).
+Toute notre architecture repose sur la manipulation d'objets abstraits (Plateau, Piece, Jeu, ...), on peut modifier leurs implémentations sans modifier le reste de l'application, sauf pour l'affichage qui utilise l'implémentation concrète (matrices) pour pouvoir les afficher. (D).
 
 ### Pieces et Factory
 
