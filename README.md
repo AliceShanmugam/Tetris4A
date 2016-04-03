@@ -1,4 +1,44 @@
 # Tetris4A
+## Groupe
+Görkem Camli <br/>
+Alice Shanmugam <br/>
+Maxime Fernandez
+
+## Build an Run
+
+Pour build le projet il faut lancer la commande
+
+
+Pour lancer le jeu il faut lancer la commande : </br>
+<code>java -cp tetris.jar MainClass</code>
+
+Pour lancer les tests unitaires : </br>
+<code>java -cp tetris.jar MainTest</code>
+
+## Features
+
+Nous avons réaliser l'ensembles des features suivantes :
+
+- High Score
+- Jeu en solo
+- Jeu en multijoueur LAN
+- 6 pièces différentes
+- 2 malus différents : 
+  - Blind : On ne voit plus l'ecran pendant un certain temps
+  - Reverse : L'ecran est inversé pendant un certain temps
+- La prochaine piece à tomber est affiché
+- La touche barre espace fait tomber la piece immédiatement
+
+
+## Manuel d'utilisation
+
+Pour lancer une partie solo : Play Game -> Play Solo <br/>
+Les contrôles sont les 4 flèches et la barre espace
+
+Pour lancer une partie en multijoueur : <br/>
+Chaque joueur doit faire : Play Game -> Play Multi <br/>
+Puis l'un des joueur entre l'ip de l'autre joueur, si le processus réussit la partie se lance.<br/>
+On peut écrire sa propre ip pour lancer une partie multijoueur seul pour tester.
 
 ## Architecture
 
