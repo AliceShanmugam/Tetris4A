@@ -71,16 +71,17 @@ public class Reseau {
             }
         }
 
-        client = new Client(ip, malus.name);
-        client.start();
+        if (malus != null) {
+            client = new Client(ip, malus.name);
+            client.start();
 
-        // Attend que l'envoi soit terminé
-        while(client.isAlive()){
-            try {
-                Thread.sleep(100);
-            }
-            catch (InterruptedException e) {
-                e.printStackTrace();
+            // Attend que l'envoi soit terminé
+            while (client.isAlive()) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
 

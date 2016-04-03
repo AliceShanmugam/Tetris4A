@@ -82,8 +82,7 @@ public class MainClass {
 
         // Lancement du moteur reseau
         Reseau reseau = new Reseau();
-
-        System.out.print("multi");
+        reseau.ip = ip;
 
         //Lancement du moteur de jeu multi
         JeuMulti moteurJeu = new JeuMulti(moteurGraphique);

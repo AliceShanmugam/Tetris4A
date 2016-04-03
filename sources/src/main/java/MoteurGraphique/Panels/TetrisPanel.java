@@ -7,10 +7,8 @@ import MoteurDeJeu.Plateau;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by asusss on 2.04.2016.
- */
-public class MultiGamePanel extends JPanel {
+
+public class TetrisPanel extends JPanel {
 
 
         private Plateau plateau;
@@ -19,7 +17,7 @@ public class MultiGamePanel extends JPanel {
         private Malus malusReceived;
         private  boolean isMulti;
 
-        public MultiGamePanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
+        public TetrisPanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
 
             this.plateau=plateau;
             this.nextPiece=nextPiece;
@@ -39,7 +37,6 @@ public class MultiGamePanel extends JPanel {
 
     private void addMenu() {
         setLayout(new GridLayout());
-
 
         GamePanel  gp= new GamePanel(plateau);
 

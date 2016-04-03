@@ -1,8 +1,5 @@
 package MoteurGraphique.Panels;
 
-/**
- * Created by asusss on 2.04.2016.
- */
 
 import MoteurDeJeu.Plateau;
 
@@ -24,6 +21,7 @@ public class GamePanel extends JPanel {
     private final static Color[] colors = {Color.BLACK, Color.ORANGE, Color.GREEN, Color.CYAN, Color.MAGENTA, Color.BLUE, Color.YELLOW, Color.RED};
 
     private Graphics2D g2d;
+
     public GamePanel(Plateau p) {
         plateau= p;
     }
@@ -42,28 +40,26 @@ public class GamePanel extends JPanel {
 		 */
 
             g.setColor(Color.DARK_GRAY);
-            for(int x = 0; x < plateau.largeur; x++) {
-                for(int y = 0; y < plateau.hauteur; y++) {
-                    g.drawLine(0, y * TILE_SIZE, plateau.largeur* TILE_SIZE, y * TILE_SIZE);
-                    g.drawLine(x * TILE_SIZE, 0, x * TILE_SIZE,plateau.hauteur * TILE_SIZE);
+            for(int x = 0; x < Plateau.largeur; x++) {
+                for(int y = 0; y < Plateau.hauteur; y++) {
+                    g.drawLine(0, y * TILE_SIZE, Plateau.largeur * TILE_SIZE, y * TILE_SIZE);
+                    g.drawLine(x * TILE_SIZE, 0, x * TILE_SIZE, Plateau.hauteur * TILE_SIZE);
                 }
             }
 
             // Draw the outline.
         g.setColor(Color.WHITE);
-        g.drawRect(0, 0, TILE_SIZE * plateau.largeur, TILE_SIZE * plateau.hauteur);
+        g.drawRect(0, 0, TILE_SIZE * Plateau.largeur, TILE_SIZE * Plateau.hauteur);
 
     }
 
     private void drawTile(Plateau plateau) {
 
-
-        for (int j = 0; j < plateau.largeur; j++) {
-            for (int i = 0; i < plateau.hauteur; i++) {
+        for (int j = 0; j < Plateau.largeur; j++) {
+            for (int i = 0; i < Plateau.hauteur; i++) {
                 int a = plateau.tab[j][i];
                 g2d.setPaint(colors[Math.abs(a)]);
-                g2d.fillRect(j* TILE_SIZE,(plateau.hauteur-1)*TILE_SIZE- i* TILE_SIZE ,  TILE_SIZE, TILE_SIZE);
-
+                g2d.fillRect(j* TILE_SIZE,(Plateau.hauteur -1)*TILE_SIZE- i* TILE_SIZE ,  TILE_SIZE, TILE_SIZE);
             }
         }
     }

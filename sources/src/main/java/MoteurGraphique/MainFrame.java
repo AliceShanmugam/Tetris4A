@@ -84,13 +84,9 @@ public class MainFrame extends JFrame implements KeyListener {
         this.malusReceived = malusReceived;
         this.isMulti = isMulti;
 
-        if (isMulti) {
-            SoloGamePanel panel = new SoloGamePanel(plateau, nextPiece, score, score2, malusReceived, isMulti);
-            replacePanel(panel);
-        } else {
-            MultiGamePanel panel = new MultiGamePanel(plateau, nextPiece, score, score2, malusReceived, isMulti);
-            replacePanel(panel);
-        }
+        TetrisPanel panel = new TetrisPanel(plateau, nextPiece, score, score2, malusReceived, isMulti);
+        replacePanel(panel);
+
     }
 
     public void showResultPanel(MenuEvent.Listener listener,int score, int score2, boolean victory) {
