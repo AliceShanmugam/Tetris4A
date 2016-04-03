@@ -20,11 +20,11 @@ public class JeuMulti extends Jeu {
     }
 
     public void go(){
-        int lastScore = getScore()/100;
+        int lastScore = getScore();
 
         super.go();
 
-        if (getScore()/100 - lastScore > 0){
+        if (getScore()/200 - lastScore/200 > 0){
             malusSent = malusFactory.getRandomMalus();
         }
     }
