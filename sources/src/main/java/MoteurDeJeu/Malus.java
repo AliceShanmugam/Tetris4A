@@ -1,7 +1,5 @@
 package MoteurDeJeu;
 
-import java.util.Objects;
-
 public class Malus {
 
     public String name;

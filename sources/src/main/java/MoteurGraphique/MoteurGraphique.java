@@ -7,7 +7,6 @@ import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
 import MoteurGraphique.Events.MenuEvent;
 import MoteurGraphique.Events.ReseauEvent;
-import Reseau.Reseau;
 
 import javax.swing.*;
 import java.net.InetAddress;
@@ -113,16 +112,9 @@ public class MoteurGraphique {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        final String finalIp = ip;
-        menuListener = itemType -> {
-            switch (itemType) {
-                case sendInvitation:
-                    reseauEvent.sendInvitation(finalIp);
-                    break;
-            }
-        };
 
-        frame.showMultiPlayerPanel(menuListener, ip);
+
+        frame.showMultiPlayerPanel(reseauEvent, ip);
     }
 
     public void showEndScreenSolo(int score) {

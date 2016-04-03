@@ -4,7 +4,6 @@ package MoteurGraphique.Panels;
  * Created by asusss on 2.04.2016.
  */
 
-import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
 
 import java.awt.*;

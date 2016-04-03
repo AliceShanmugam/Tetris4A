@@ -4,8 +4,9 @@ import MoteurDeJeu.Jeu;
 import MoteurDeJeu.Malus;
 import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
-import MoteurGraphique.Panels.*;
+import MoteurGraphique.Events.ReseauEvent;
 import MoteurGraphique.Events.MenuEvent;
+import MoteurGraphique.Panels.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -93,10 +94,10 @@ public class MainFrame extends JFrame implements KeyListener {
     }
 
 
-    public void showMultiPlayerPanel(MenuEvent.Listener listener, String ip) {
+    public void showMultiPlayerPanel(ReseauEvent reseauEvent, String ip) {
         MultiPlayerSelectionPanel panel = new MultiPlayerSelectionPanel(ip);
         replacePanel(panel);
-        panel.setMenuEventListeners(listener);
+        panel.setMenuEventListeners(reseauEvent);
     }
 
 

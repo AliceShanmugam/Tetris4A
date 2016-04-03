@@ -29,7 +29,7 @@ public class Jeu {
     private int lastSpeed;
 
     public Jeu(MoteurGraphique moteurGraphique){
-        this.speed = 800;
+        this.speed = 400;
         this.score = 0;
         this.finish = false;
         this.fall = false;

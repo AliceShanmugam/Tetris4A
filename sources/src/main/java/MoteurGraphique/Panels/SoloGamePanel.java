@@ -3,7 +3,6 @@ package MoteurGraphique.Panels;
 import MoteurDeJeu.Malus;
 import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
-import MoteurGraphique.Events.MenuEvent;
 
 import javax.swing.*;
 import java.awt.*;

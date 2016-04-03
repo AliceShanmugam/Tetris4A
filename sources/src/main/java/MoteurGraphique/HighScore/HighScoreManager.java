@@ -4,8 +4,6 @@ package MoteurGraphique.HighScore;
  * Created by asusss on 2.04.2016.
  */
 
-import jdk.internal.dynalink.beans.StaticClass;
-
 import java.util.*;
         import java.io.*;
 

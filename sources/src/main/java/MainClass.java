@@ -1,5 +1,7 @@
-import MoteurDeJeu.*;
-import MoteurDeJeu.Pieces.*;
+import MoteurDeJeu.JeuMulti;
+import MoteurDeJeu.JeuSolo;
+import MoteurDeJeu.Pieces.Piece;
+import MoteurDeJeu.Plateau;
 import MoteurGraphique.MoteurGraphique;
 import Reseau.Reseau;
 

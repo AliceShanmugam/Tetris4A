@@ -1,6 +1,7 @@
 package MoteurDeJeu;
 
 import MoteurDeJeu.Pieces.*;
+
 import java.util.*;
 
 public class PieceFactory {

@@ -1,6 +1,6 @@
 package MoteurGraphique.Panels;
 
-import MoteurGraphique.Events.MenuEvent;
+import MoteurGraphique.Events.ReseauEvent;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,6 +9,7 @@ public class MultiPlayerSelectionPanel extends JPanel {
 
     private JButton invitationButton;
     private JLabel myIp;
+    private JLabel text;
     private JTextField textField;
 
     public MultiPlayerSelectionPanel(String ip) {
@@ -24,17 +25,28 @@ public class MultiPlayerSelectionPanel extends JPanel {
 
     private void addMenu(String ip) {
         JPanel menuWrapper = new JPanel();
-        menuWrapper.setLayout(new BoxLayout(menuWrapper, BoxLayout.Y_AXIS));
+        menuWrapper.setLayout(new GridBagLayout());
 
         invitationButton = new JButton();
-        myIp = new JLabel("My ip : "+ip);
-        textField = new JTextField ();
+        myIp = new JLabel("My IP : " + ip);
+        text = new JLabel("Friend IP :");
+        textField = new JTextField(10);
 
         setButtons();
 
-        menuWrapper.add(myIp);
-        menuWrapper.add(textField);
-        menuWrapper.add(invitationButton);
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.WEST;
+
+        menuWrapper.add(myIp, gbc);
+        gbc.gridy++;
+        menuWrapper.add(text, gbc);
+        gbc.gridx++;
+        menuWrapper.add(textField, gbc);
+        gbc.gridx--;
+        gbc.gridy++;
+        menuWrapper.add(invitationButton, gbc);
 
         add(menuWrapper, BorderLayout.CENTER);
     }
@@ -48,8 +60,13 @@ public class MultiPlayerSelectionPanel extends JPanel {
         myIp.setBackground(new Color(0, 32, 48));
         myIp.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        invitationButton.setPreferredSize( new Dimension( 200, 24 ) );
-        invitationButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        text.setFont(new java.awt.Font("Helvetica", Font.BOLD, 16));
+        text.setBackground(new Color(0, 32, 48));
+        text.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        textField.setAlignmentX(Component.CENTER_ALIGNMENT);
+        Font bigFont = textField.getFont().deriveFont(Font.PLAIN, 16f);
+        textField.setFont(bigFont);
 
         invitationButton.setText("SEND INVITATION");
         invitationButton.setForeground(Color.GREEN);
@@ -57,9 +74,11 @@ public class MultiPlayerSelectionPanel extends JPanel {
         invitationButton.setAlignmentX(Component.CENTER_ALIGNMENT);
     }
 
-
-    public void setMenuEventListeners(MenuEvent.Listener listener) {
-        invitationButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.sendInvitation));
+    public void setMenuEventListeners(ReseauEvent reseauEvent) {
+        invitationButton.addActionListener(event -> {
+            System.out.println(textField.getText());
+            reseauEvent.sendInvitation(textField.getText());
+        });
     }
 
 }

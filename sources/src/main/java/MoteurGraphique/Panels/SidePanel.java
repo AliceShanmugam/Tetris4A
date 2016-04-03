@@ -1,11 +1,8 @@
 package MoteurGraphique.Panels;
 
-/**
- * Created by asusss on 2.04.2016.
- */
 import MoteurDeJeu.Jeu;
 import MoteurDeJeu.Malus;
-import MoteurDeJeu.Pieces.*;
+import MoteurDeJeu.Pieces.Piece;
 
 import java.awt.*;
 
