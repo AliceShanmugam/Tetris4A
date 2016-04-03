@@ -12,8 +12,22 @@ import java.awt.*;
  */
 public class MultiGamePanel extends JPanel {
 
+
+        private Plateau plateau;
+        private Piece nextPiece;
+        private int score,score2;
+        private Malus malusReceived;
+        private  boolean isMulti;
+
         public MultiGamePanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
-        initComponents();
+
+            this.plateau=plateau;
+            this.nextPiece=nextPiece;
+            this.score=score;
+            this.score2=score2;
+            this.malusReceived=malusReceived;
+            this.isMulti=isMulti;
+            initComponents();
     }
 
         @SuppressWarnings("unchecked")
@@ -27,9 +41,9 @@ public class MultiGamePanel extends JPanel {
         setLayout(new GridLayout());
 
 
-        GamePanel  gp= new GamePanel();
+        GamePanel  gp= new GamePanel(plateau);
 
-        SidePanel sp= new SidePanel();
+        SidePanel sp= new SidePanel(nextPiece,  score,  score2, malusReceived, isMulti);
 
         add(gp);
         add(sp);

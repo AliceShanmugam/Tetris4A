@@ -15,6 +15,7 @@ public class SoloGamePanel extends JPanel {
     private Piece nextPiece;
     private int score,score2;
     private Malus malus;
+    private boolean isMulti;
 
 
 
@@ -25,6 +26,7 @@ public class SoloGamePanel extends JPanel {
         this.score=score;
         this.score2=score2;
         this.malus=malusReceived;
+        this.isMulti=isMulti;
     }
 
     @SuppressWarnings("unchecked")
@@ -39,7 +41,7 @@ public class SoloGamePanel extends JPanel {
 
 
         GamePanel  gp= new GamePanel(plateau);
-        SidePanel sp= new SidePanel(nextPiece,score,score2,malus);
+        SidePanel sp= new SidePanel(nextPiece,score,score2,malus,isMulti);
 
         add(gp);
         add(sp);

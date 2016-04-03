@@ -57,6 +57,7 @@ public class PlayerSelectionPanel extends JPanel {
         menuButton.setText("MAIN MENU");
         menuButton.setBackground(new Color(0, 32, 48));
         menuButton.setForeground(Color.LIGHT_GRAY);
+        menuButton.setAlignmentX(Component.CENTER_ALIGNMENT);
     }
 
 

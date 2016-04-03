@@ -126,7 +126,7 @@ public class SidePanel extends JPanel {
             for (int i = 0; i < type.largeur; i++) {
                 int a = type.tab[j][i];
                 g2d.setPaint(colors[a]);
-                g2d.fillRect(105+i* TILE_SIZE, 50+j* TILE_SIZE ,  TILE_SIZE, TILE_SIZE);
+                g2d.fillRect(105+j* TILE_SIZE, 50+i* TILE_SIZE ,  TILE_SIZE, TILE_SIZE);
 
             }
         }
