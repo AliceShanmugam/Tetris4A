@@ -22,25 +22,39 @@ public class PieceFactory {
 
         switch (randomPiece){
             case "Piece1":
-                return new Piece1();
+                Piece piece = new Piece1();
+                piece.setRandomColor();
+                return piece;
 
             case "Piece2":
-                return new Piece2();
+                piece = new Piece2();
+                piece.setRandomColor();
+                return piece;
 
             case "Piece3":
-                return new Piece3();
+                piece = new Piece3();
+                piece.setRandomColor();
+                return piece;
 
             case "Piece4":
-                return new Piece4();
+                piece = new Piece4();
+                piece.setRandomColor();
+                return piece;
 
             case "Piece5":
-                return new Piece5();
+                piece = new Piece5();
+                piece.setRandomColor();
+                return piece;
 
             case "Piece6":
-                return new Piece6();
+                piece = new Piece6();
+                piece.setRandomColor();
+                return piece;
 
             default:
-                return new Piece1();
+                piece = new Piece1();
+                piece.setRandomColor();
+                return piece;
         }
     }
 }

@@ -275,6 +275,18 @@ public class Plateau {
         return false;
     }
 
+
+    // Retire la piece du plateau
+    public void removePiece() {
+        for (int i=0; i < largeur; i++){
+            for (int j=0; j < hauteur; j++){
+                if (tab[i][j] < 0){
+                    tab[i][j] = 0;
+                }
+            }
+        }
+    }
+
     // Pour l'affichage dans la console
     public String toString(){
         String ret = "";

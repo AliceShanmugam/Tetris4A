@@ -1,5 +1,6 @@
 package MoteurGraphique;
 
+import MoteurDeJeu.Jeu;
 import MoteurDeJeu.Malus;
 import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
@@ -8,11 +9,14 @@ import MoteurGraphique.Events.MenuEvent;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements KeyListener {
 
     final int WIDTH = 680;
     final int HEIGHT = 876;
+    public Jeu jeu = null;
 
     public MainFrame() {
         initComp();
@@ -26,6 +30,10 @@ public class MainFrame extends JFrame {
         setSize(size);
         setMinimumSize(size);
         setMaximumSize(size);
+
+        addKeyListener(this);
+        setFocusable(true);
+        setFocusTraversalKeysEnabled(false);
 
         setVisible(true);
     }
@@ -84,4 +92,34 @@ public class MainFrame extends JFrame {
         return new Dimension(WIDTH, HEIGHT);
     }
 
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+        if (jeu != null){
+            switch (e.getKeyCode()){
+                case 37:
+                    jeu.left();
+                    break;
+                case 39:
+                    jeu.right();
+                    break;
+                case 40:
+                    jeu.rotationLeft();
+                    break;
+                case 38:
+                    jeu.rotationRight();
+                    break;
+            }
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
 }

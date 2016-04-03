@@ -10,7 +10,6 @@ import java.awt.*;
 
 public class SoloGamePanel extends JPanel {
 
-    private javax.swing.JLabel text;
     private Plateau plateau;
     private Piece nextPiece;
     private int score,score2;
@@ -40,8 +39,8 @@ public class SoloGamePanel extends JPanel {
         setLayout(new GridLayout());
 
 
-        GamePanel  gp= new GamePanel(plateau);
-        SidePanel sp= new SidePanel(nextPiece,score,score2,malus,isMulti);
+        GamePanel gp = new GamePanel(plateau);
+        SidePanel sp = new SidePanel(nextPiece,score,score2,malus,isMulti);
 
         add(gp);
         add(sp);

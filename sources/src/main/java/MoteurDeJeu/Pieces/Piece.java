@@ -40,6 +40,16 @@ public class Piece {
         tab = ret;
     }
 
+    public void setRandomColor(){
+        int color =  1 + (int)(Math.random() * 4);
+
+        for (int i=0;i<largeur;i++){
+            for (int j=0;j<largeur;j++){
+                if (tab[i][j]!=0) tab[i][j] = color;
+            }
+        }
+    }
+
     public String toString(){
         String ret = "";
 

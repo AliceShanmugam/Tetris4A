@@ -1,6 +1,7 @@
 
 package MoteurGraphique;
 
+import MoteurDeJeu.Jeu;
 import MoteurDeJeu.Malus;
 import MoteurDeJeu.Pieces.Piece;
 import MoteurDeJeu.Plateau;
@@ -124,4 +125,7 @@ public class MoteurGraphique {
 
     }
 
+    public void setJeu(Jeu jeu){
+        frame.jeu = jeu;
+    }
 }

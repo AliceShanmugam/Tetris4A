@@ -11,7 +11,7 @@ public class JeuMulti extends Jeu {
     private Malus malusSent = null;
 
     public JeuMulti(MoteurGraphique moteurGraphique) {
-
+        super(moteurGraphique);
     }
 
     public void setMalusReceived(Malus malus) {
