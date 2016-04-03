@@ -76,7 +76,6 @@ public class MultiPlayerSelectionPanel extends JPanel {
 
     public void setMenuEventListeners(ReseauEvent reseauEvent) {
         invitationButton.addActionListener(event -> {
-            System.out.println(textField.getText());
             reseauEvent.sendInvitation(textField.getText());
         });
     }

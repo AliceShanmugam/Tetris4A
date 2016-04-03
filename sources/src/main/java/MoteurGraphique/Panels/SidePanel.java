@@ -72,17 +72,13 @@ public class SidePanel extends JPanel {
        // Piece p = tetris.getNextPiece();
         if(p!= null) {
 
-            int largeur= p.largeur;
-
-			// Calculate the top left corner (origin) of the piece.
-            int startX = (SQUARE_CENTER_X - (largeur * TILE_SIZE / 2));
-            int startY = (SQUARE_CENTER_Y - (largeur * TILE_SIZE / 2));
+            int largeur= Piece.largeur;
 
 			// Loop through the piece and draw it's tiles onto the preview.
             for(int row = 0; row < largeur; row++) {
                 for(int col = 0; col < largeur; col++) {
 
-                    drawTile(p, startX + ((col ) * TILE_SIZE), startY + ((row ) * TILE_SIZE), g);
+                    drawTile(p);
 
                 }
             }
@@ -100,9 +96,9 @@ public class SidePanel extends JPanel {
 
         if(isMulti)
             g2d.drawString("Other Player's Score: " + score2, LARGE_INSET, offset += TEXT_STRIDE);
+        if(malus != null)
+            g2d.drawString("Actif Malus: " + malus.name, LARGE_INSET, offset += TEXT_STRIDE);
 
-        // MALUS will be added.......
-        // **********
 
         g2d.setFont(LARGE_FONT);
         g2d.drawString("Controls", SMALL_INSET, offset = CONTROLS_INSET);
@@ -117,11 +113,11 @@ public class SidePanel extends JPanel {
     }
 
 
-   private void drawTile(Piece type, int x, int y, Graphics g) {
+   private void drawTile(Piece type) {
 
 
-        for (int j = 0; j < type.largeur; j++) {
-            for (int i = 0; i < type.largeur; i++) {
+        for (int j = 0; j < Piece.largeur; j++) {
+            for (int i = 0; i < Piece.largeur; i++) {
                 int a = type.tab[j][i];
                 g2d.setPaint(colors[a]);
                 g2d.fillRect(105+j* TILE_SIZE, 50+i* TILE_SIZE ,  TILE_SIZE, TILE_SIZE);

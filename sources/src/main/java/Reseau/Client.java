@@ -31,8 +31,6 @@ public class Client extends Thread{
             DatagramSocket socket = new DatagramSocket();
             DatagramPacket donneesEmises = new DatagramPacket(buffer, length, serveur, port);
 
-            System.out.println(ip==null);
-
             // Envoi
             socket.setSoTimeout(10000);
             socket.send(donneesEmises);

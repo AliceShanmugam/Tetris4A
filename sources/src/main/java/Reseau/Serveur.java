@@ -40,9 +40,6 @@ public class Serveur extends Thread{
                 taille = paquet.getLength();
                 message = new String(paquet.getData(), 0, taille);
 
-                System.out.println("\n" + paquet.getAddress());
-                System.out.println("Donnees reçues = " + message);
-
                 // Traitement
 
                 switch(message){
@@ -67,6 +64,13 @@ public class Serveur extends Thread{
                     case "Blind" :
                         MalusFactory factory = new MalusFactory();
                         Malus malus = factory.createMalus("Blind");
+                        reseau.receiveMalus(malus);
+                        break;
+
+                    // Reception du malus "Reverse"
+                    case "Reverse" :
+                        factory = new MalusFactory();
+                        malus = factory.createMalus("Reverse");
                         reseau.receiveMalus(malus);
                         break;
 

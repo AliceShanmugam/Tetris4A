@@ -42,6 +42,7 @@ public class MainClass {
         //Lancement du moteur de jeu solo
         JeuSolo moteurJeu = new JeuSolo(moteurGraphique);
 
+        System.out.print("solo");
 
         // Initialisation des variables
         boolean finish = false;

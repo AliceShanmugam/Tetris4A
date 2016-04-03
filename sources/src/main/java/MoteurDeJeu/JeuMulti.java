@@ -9,22 +9,47 @@ public class JeuMulti extends Jeu {
 
     // Malus envoyé par le joueur adverse
     private Malus malusSent = null;
+    private int malusTimeOut;
+
+    // Malus facotry
+    private MalusFactory malusFactory;
 
     public JeuMulti(MoteurGraphique moteurGraphique) {
         super(moteurGraphique);
+        malusFactory = new MalusFactory();
+    }
+
+    public void go(){
+        int lastScore = getScore()/100;
+
+        super.go();
+
+        if (getScore()/100 - lastScore > 0){
+            malusSent = malusFactory.getRandomMalus();
+        }
     }
 
     public void setMalusReceived(Malus malus) {
-        this.malusReceived = malus;
+        if (malus!=null){
+            this.malusReceived = malus;
+            this.malusTimeOut = malus.timeout;
+        }
     }
 
     public Malus getMalus() {
-        return malusSent;
+        Malus ret = malusSent;
+        malusSent = null;
+        return ret;
     }
 
     public Malus getMalusReceived() {
         Malus ret = malusReceived;
-        malusReceived = null;
+        if (malusTimeOut <= 0) {
+            malusReceived = null;
+        }
+        else{
+            malusTimeOut--;
+        }
         return ret;
     }
 }

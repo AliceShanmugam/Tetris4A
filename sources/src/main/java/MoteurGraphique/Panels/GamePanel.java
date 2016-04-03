@@ -1,9 +1,11 @@
 package MoteurGraphique.Panels;
 
 
+import MoteurDeJeu.Malus;
 import MoteurDeJeu.Plateau;
 
 import java.awt.*;
+import java.util.Objects;
 
 import javax.swing.JPanel;
 
@@ -18,12 +20,14 @@ public class GamePanel extends JPanel {
     public static final int SHADE_WIDTH = 4;
 
     private Plateau plateau;
+    private Malus malus;
     private final static Color[] colors = {Color.BLACK, Color.ORANGE, Color.GREEN, Color.CYAN, Color.MAGENTA, Color.BLUE, Color.YELLOW, Color.RED};
 
     private Graphics2D g2d;
 
-    public GamePanel(Plateau p) {
-        plateau= p;
+    public GamePanel(Plateau p, Malus m) {
+        plateau = p;
+        malus = m;
     }
 
     @Override
@@ -34,7 +38,7 @@ public class GamePanel extends JPanel {
         g.translate(BORDER_WIDTH, BORDER_WIDTH);
 
         setBackground(Color.BLACK);
-        drawTile(plateau);
+        drawTile(plateau, malus);
 		/*
 		 * Draw the board differently depending on the current game state.
 		 */
@@ -53,11 +57,17 @@ public class GamePanel extends JPanel {
 
     }
 
-    private void drawTile(Plateau plateau) {
+    private void drawTile(Plateau plateau, Malus malus) {
 
         for (int j = 0; j < Plateau.largeur; j++) {
             for (int i = 0; i < Plateau.hauteur; i++) {
                 int a = plateau.tab[j][i];
+                if (malus != null && Objects.equals(malus.name, "Reverse")){
+                    a = plateau.tab[Plateau.largeur-j-1][Plateau.hauteur-i-1];
+                }
+                if (malus != null && Objects.equals(malus.name, "Blind")){
+                    a = 1 + (int)(Math.random() * 4);
+                }
                 g2d.setPaint(colors[Math.abs(a)]);
                 g2d.fillRect(j* TILE_SIZE,(Plateau.hauteur -1)*TILE_SIZE- i* TILE_SIZE ,  TILE_SIZE, TILE_SIZE);
             }

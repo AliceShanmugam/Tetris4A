@@ -28,8 +28,8 @@ public class TetrisPanel extends JPanel {
             initComponents();
     }
 
-        @SuppressWarnings("unchecked")
-        private void initComponents() {
+    @SuppressWarnings("unchecked")
+    private void initComponents() {
         setLayout(new BorderLayout());
         addMenu();
         setVisible(true);
@@ -38,7 +38,7 @@ public class TetrisPanel extends JPanel {
     private void addMenu() {
         setLayout(new GridLayout());
 
-        GamePanel  gp= new GamePanel(plateau);
+        GamePanel  gp= new GamePanel(plateau, malusReceived);
 
         SidePanel sp= new SidePanel(nextPiece,  score,  score2, malusReceived, isMulti);
 

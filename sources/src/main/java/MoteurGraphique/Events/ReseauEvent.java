@@ -22,7 +22,6 @@ public class ReseauEvent extends Thread{
 
         while(reseau.ip == null){
             try {
-                System.out.print("j'attend");
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -38,8 +37,7 @@ public class ReseauEvent extends Thread{
     public void sendInvitation(String ip) {
         try {
             reseau.sendInvitation(InetAddress.getByName(ip));
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
+        } catch (UnknownHostException ignored) {
         }
     }
 }
