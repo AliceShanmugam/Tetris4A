@@ -18,6 +18,14 @@ public class MainFrame extends JFrame implements KeyListener {
     final int HEIGHT = 876;
     public Jeu jeu = null;
 
+    private Plateau plateau;
+    private Piece nextPiece;
+    private int score;
+    private int score2;
+    private Malus malusReceived;
+    private boolean isMulti;
+
+
     public MainFrame() {
         initComp();
     }
@@ -62,8 +70,18 @@ public class MainFrame extends JFrame implements KeyListener {
         menuPanel.setMenuEventListeners(listener);
     }
 
+    public void updatePlateau(Plateau newPlateau){
+        showGamePanel(newPlateau, nextPiece, score, score2, malusReceived, isMulti);
+    }
 
     public void showGamePanel(Plateau plateau, Piece nextPiece, int score, int score2, Malus malusReceived, boolean isMulti) {
+
+        this.plateau = plateau;
+        this.nextPiece = nextPiece;
+        this.score = score;
+        this.score2 = score2;
+        this.malusReceived = malusReceived;
+        this.isMulti = isMulti;
 
         if (isMulti) {
             SoloGamePanel panel = new SoloGamePanel(plateau, nextPiece, score, score2, malusReceived, isMulti);
@@ -75,8 +93,8 @@ public class MainFrame extends JFrame implements KeyListener {
     }
 
 
-    public void showMultiPlayerPanel(MenuEvent.Listener listener) {
-        MultiPlayerSelectionPanel panel = new MultiPlayerSelectionPanel();
+    public void showMultiPlayerPanel(MenuEvent.Listener listener, String ip) {
+        MultiPlayerSelectionPanel panel = new MultiPlayerSelectionPanel(ip);
         replacePanel(panel);
         panel.setMenuEventListeners(listener);
     }
@@ -104,15 +122,22 @@ public class MainFrame extends JFrame implements KeyListener {
             switch (e.getKeyCode()){
                 case 37:
                     jeu.left();
+                    updatePlateau(jeu.getPlateau());
                     break;
                 case 39:
                     jeu.right();
+                    updatePlateau(jeu.getPlateau());
                     break;
                 case 40:
                     jeu.rotationLeft();
+                    updatePlateau(jeu.getPlateau());
                     break;
                 case 38:
                     jeu.rotationRight();
+                    updatePlateau(jeu.getPlateau());
+                    break;
+                case 32:
+                    jeu.fall();
                     break;
             }
         }

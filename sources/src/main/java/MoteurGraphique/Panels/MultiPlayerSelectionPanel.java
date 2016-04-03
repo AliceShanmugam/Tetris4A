@@ -7,33 +7,35 @@ import java.awt.*;
 
 public class MultiPlayerSelectionPanel extends JPanel {
 
-    private JButton playSoloButton;
-    private JButton playMultiButton;
-    private JButton menuButton;
+    private JButton invitationButton;
+    private JLabel myIp;
+    private JTextField textField;
 
-    public MultiPlayerSelectionPanel() {
-        initComponents();
+    public MultiPlayerSelectionPanel(String ip) {
+        initComponents(ip);
     }
 
     @SuppressWarnings("unchecked")
-    private void initComponents() {
+    private void initComponents(String ip) {
         setLayout(new BorderLayout());
-        addMenu();
+        addMenu(ip);
         setVisible(true);
     }
 
-    private void addMenu() {
+    private void addMenu(String ip) {
         JPanel menuWrapper = new JPanel();
         menuWrapper.setLayout(new BoxLayout(menuWrapper, BoxLayout.Y_AXIS));
-        playSoloButton = new JButton();
-        playMultiButton = new JButton();
-        menuButton = new JButton();
+
+        invitationButton = new JButton();
+        myIp = new JLabel("My ip : "+ip);
+        textField = new JTextField ();
 
         setButtons();
 
-        menuWrapper.add(playSoloButton);
-        menuWrapper.add(playMultiButton);
-        menuWrapper.add(menuButton);
+        menuWrapper.add(myIp);
+        menuWrapper.add(textField);
+        menuWrapper.add(invitationButton);
+
         add(menuWrapper, BorderLayout.CENTER);
     }
 
@@ -41,27 +43,23 @@ public class MultiPlayerSelectionPanel extends JPanel {
     {
         setBackground(Color.BLACK);
 
+        myIp.setFont(new java.awt.Font("Helvetica", Font.BOLD, 16));
+        myIp.setForeground(Color.BLUE);
+        myIp.setBackground(new Color(0, 32, 48));
+        myIp.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        playSoloButton.setPreferredSize(new Dimension(500,500));
-        playSoloButton.setText("");
-        playSoloButton.setBackground(new Color(0, 32, 48));
-        playSoloButton.setForeground(Color.GREEN);
-        playSoloButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        invitationButton.setPreferredSize( new Dimension( 200, 24 ) );
+        invitationButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-
-        playMultiButton.setText("");
-        playMultiButton.setForeground(Color.GREEN);
-        playMultiButton.setBackground(new Color(0, 32, 48));
-        playMultiButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        menuButton.setText("BACK");
-        menuButton.setBackground(new Color(0, 32, 48));
-        menuButton.setForeground(Color.LIGHT_GRAY);
+        invitationButton.setText("SEND INVITATION");
+        invitationButton.setForeground(Color.GREEN);
+        invitationButton.setBackground(new Color(0, 32, 48));
+        invitationButton.setAlignmentX(Component.CENTER_ALIGNMENT);
     }
 
 
     public void setMenuEventListeners(MenuEvent.Listener listener) {
-        menuButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.back));
+        invitationButton.addActionListener(event -> listener.onMenuEvent(MenuEvent.ItemType.sendInvitation));
     }
 
 }

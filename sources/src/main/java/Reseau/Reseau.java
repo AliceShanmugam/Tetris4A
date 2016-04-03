@@ -15,7 +15,7 @@ public class Reseau {
     private boolean finish = false;
 
     // IP du joueur adverse et mon IP
-    public InetAddress ip;
+    public InetAddress ip  = null;
 
     // Serveur
     Serveur serveur;

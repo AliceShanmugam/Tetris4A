@@ -25,11 +25,14 @@ public class Jeu {
     private Piece currentPiece;
     private int iPiece;
     private int jPiece;
+    private boolean fall;
+    private int lastSpeed;
 
     public Jeu(MoteurGraphique moteurGraphique){
-        this.speed = 300;
+        this.speed = 800;
         this.score = 0;
         this.finish = false;
+        this.fall = false;
         this.plateau = new Plateau();
         this.pieceFactory = new PieceFactory();
         this.nextPiece = pieceFactory.getRandomPiece();
@@ -80,8 +83,23 @@ public class Jeu {
 
             nextPiece = pieceFactory.getRandomPiece();
 
+            // Stop de la chute si il y'a lieu
+            if (fall){
+                fall = false;
+                speed = lastSpeed;
+            }
+
             // Accélère le jeu petit à petit
             if (speed>200) speed -= 5;
+        }
+    }
+
+    // Fait tomber la piece rapidement
+    public void fall() {
+        if (!fall){
+            fall = true;
+            lastSpeed = speed;
+            speed = 25;
         }
     }
 

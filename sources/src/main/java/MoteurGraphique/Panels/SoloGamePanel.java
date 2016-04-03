@@ -12,7 +12,7 @@ public class SoloGamePanel extends JPanel {
 
     private Plateau plateau;
     private Piece nextPiece;
-    private int score,score2;
+    public int score,score2;
     private Malus malus;
     private boolean isMulti;
 
