@@ -24,16 +24,16 @@ Nous avons réaliser l'ensembles des features suivantes :
 - Jeu en multijoueur LAN
 - 6 pièces différentes
 - 2 malus différents : 
-  - Blind : On ne voit plus l'ecran pendant un certain temps
+  - Blind : On ne voit plus l'écran pendant un certain temps
   - Reverse : L'ecran est inversé pendant un certain temps
-- La prochaine piece à tomber est affiché
+- La prochaine pièce à tomber est affichée
 - La touche barre espace fait tomber la piece immédiatement
 
 
 ## Manuel d'utilisation
 
 Pour lancer une partie solo : Play Game -> Play Solo <br/>
-Les contrôles sont les 4 flèches et la barre espace
+Les contrôles sont les 4 flèches et la barre espace.
 
 Pour lancer une partie en multijoueur : <br/>
 Chaque joueur doit faire : Play Game -> Play Multi <br/>
